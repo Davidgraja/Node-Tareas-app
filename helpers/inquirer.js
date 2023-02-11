@@ -42,8 +42,6 @@ const  menuOptions = [
 ]
 
 
-
-
 const inquireMenu = async () =>{
     console.clear();
 
