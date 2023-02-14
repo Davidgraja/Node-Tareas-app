@@ -10,7 +10,7 @@ Este proyecto esta construido sobre Node js  y varios paquetes como:
 
 - [uuid](https://www.npmjs.com/package/uuid) : Para la creación de ids unicos
 
-# Instalacion : 
+# Instalación : 
 1. Clona este repositorio en tu maquina local
 
 2. Abre tu terminal , navega hacia la carpeta donde has clonado este repositorio y ejucuta el comando `$npm install`
