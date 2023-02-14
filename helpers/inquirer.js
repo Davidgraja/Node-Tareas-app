@@ -70,10 +70,10 @@ const pauseInTerminal = async () =>{
     ]
 
 
-
     const event = await prompt(inputPause);
     
     return event
+
 }
 
 
@@ -151,10 +151,43 @@ const  confirm =  async ( message ) => {
     return ok;
 }
 
+
+const completarTareasChecklist = async (tareas = []) =>{
+
+    console.log('\n')
+
+    const  choices = tareas.map( (tarea , i) => {
+
+        let  numeroDeTarea = i + 1 
+        return {
+            value : tarea.id,
+            name : `${numeroDeTarea}.`.green + ` ${tarea.descripcion} `,
+            checked : (tarea.completadoEn) ? true : false 
+
+        }
+
+    } )
+
+
+    const question = [
+        {
+            type : 'checkbox',
+            name : 'ids',
+            message : 'Selecciones : ',
+            choices
+        }
+    ]
+    const {ids} = await prompt(question)
+    return ids;
+}
+
+
+
 module.exports = {
     inquireMenu,
     pauseInTerminal,
     leerInput,
     listaDeTareasEliminar,
-    confirm
+    confirm,
+    completarTareasChecklist
 }

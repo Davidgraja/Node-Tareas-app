@@ -13,9 +13,6 @@ class Tarea {
         this.completadoEn = null;
     }
 
-    
-
 }
-
 
 module.exports = Tarea
